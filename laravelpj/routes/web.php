@@ -1,15 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 
-
-
-Route::get('/',[TestController::class, 'index']);
-
-
-// Route::get('/{msg?}', [App\Http\Controllers\TestController::class, 'index']);
-
+Route::get('/', [TestController::class, 'index']);
 
 ?>
