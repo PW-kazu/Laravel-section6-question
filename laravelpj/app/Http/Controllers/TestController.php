@@ -8,6 +8,12 @@ class TestController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $item = [
+            'txt' => 'テキスト',
+            'param' => $param
+
+        ];
+        return('index',$item);
     }
 }
+?>

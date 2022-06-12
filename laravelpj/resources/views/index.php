@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<?php
 
-<body>
+namespace App\Http\Controllers;
 
-  <h1><?php echo $txt;?></h1>
+use Illuminate\Http\Request;
 
-</body>
+class TestController extends Controller
+{
+    public function index(Request $request)
+    {
+        $item = [
+            'txt' => 'テキスト',
+            'param' => $request->param
+        ];
+        return view('index', $item);
+    }
+}
 
-
-</html>
+?>
